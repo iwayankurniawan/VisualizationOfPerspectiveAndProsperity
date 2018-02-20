@@ -1,0 +1,67 @@
+h1 {
+    text-align: right;
+}
+
+#showCountry{
+    height: 400px;
+    overflow: auto;
+}
+
+.row{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+svg {
+  font: 10px sans-serif;
+}
+
+.background path {
+  fill: none;
+  stroke: #ddd;
+  shape-rendering: crispEdges;
+}
+
+.foreground path {
+  fill: none;
+  /* stroke: steelblue; */
+}
+
+.highlighted path {
+  fill: none;
+  stroke-width: 4;
+  /* stroke: steelblue; */
+}
+
+.brush .extent {
+  fill-opacity: .3;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+  cursor: move;
+}
+
+.row1 {
+  cursor: pointer;
+}
+.row1:hover {
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+.color-block, .color-bar {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin: 1px 4px 1px 0px;
+}

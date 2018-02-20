@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Information Visualization</title>
+    <!-- Parallel Coordinates styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div class="row" style="text-align: left;">
+        <div class="col-sm-4">
+          <h3>Visualization of People Perspective Towards Country Prosperity</h3>
+          <p></p>
+        </div>
+        <div class="col-sm-8">
+          <p><br>This is a Visualization using data from World Values survey and Gapminder. I would like to show you, the corelation between people perspective and coof There are several feature to use this visualization like brushing, filter based on year and country and you can reorder the axis. Make sure to always checked the year to use all the feature and press submit button to execute the feature (Developed by: I Wayan Kurniawan)</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-10" id="chart"></div>
+        <div class="col-sm-2" id="countryList">
+          <p>Name of Country</p>
+          <div class="col" id="showCountry"></div>
+        </div>
+      </div>
+      <div class="col">
+        <p id="yearLabel">Select Year</p>
+        <div class="row" id="Year">
+          <div class="col">
+            <div class="row">
+              <input class="col-sm-2" type="checkbox" id="year1" value="1">
+              <label class="col-sm-10" for="year1">Year 1994 - 1998</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row">
+              <input class="col-sm-2" type="checkbox" id="year2" value="2">
+              <label class="col-sm-10" for="year2">Year 1999 - 2004</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row">
+              <input class="col-sm-2" type="checkbox" id="year3" value="3">
+              <label class="col-sm-10" for="year3">Year 2005 - 2009</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row">
+              <input class="col-sm-2" type="checkbox" id="year4" value="4">
+              <label class="col-sm-10" for="year4">Year 2010 - 2014</label>
+            </div>
+          </div>
+        </div>
+        <p id="start">Press Submit to Start Visualization</p>
+        <p id="countryLabel">Select Country</p>
+        <div class="row" id="Country">
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Argentina" value="Argentina">
+                  <label class="col-sm-10" for="Argentina">Argentina</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Australia" value="Australia">
+                  <label class="col-sm-10" for="Australia">Australia</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Chile" value="Chile">
+                  <label class="col-sm-10" for="Chile">Chile</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="China" value="China">
+                  <label class="col-sm-10" for="China">China</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Colombia" value="Colombia">
+                  <label class="col-sm-10" for="Colombia">Colombia</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Egypt" value="Egypt">
+                  <label class="col-sm-10" for="Egypt">Egypt</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Georgia" value="Georgia">
+                  <label class="col-sm-10" for="Georgia">Georgia</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Germany" value="Germany">
+                  <label class="col-sm-10" for="Germany">Germany</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="India" value="India">
+                  <label class="col-sm-10" for="India">India</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Japan" value="Japan">
+                  <label class="col-sm-10" for="Japan">Japan</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Mexico" value="Mexico">
+                  <label class="col-sm-10" for="Mexico">Mexico</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Morocco" value="Morocco">
+                  <label class="col-sm-10" for="Morocco">Morocco</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="New Zealand" value="New Zealand">
+                  <label class="col-sm-10" for="New Zealand">New Zealand</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Nigeria" value="Nigeria">
+                  <label class="col-sm-10" for="Nigeria">Nigeria</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Pakistan" value="Pakistan">
+                  <label class="col-sm-10" for="Pakistan">Pakistan</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Peru" value="Peru">
+                  <label class="col-sm-10" for="Peru">Peru</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Philippines" value="Philippines">
+                  <label class="col-sm-10" for="Philippines">Philippines</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Poland" value="Poland">
+                  <label class="col-sm-10" for="Poland">Poland</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Romania" value="Romania">
+                  <label class="col-sm-10" for="Romania">Romania</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Russia" value="Russia">
+                  <label class="col-sm-10" for="Russia">Russia</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Slovenia" value="Slovenia">
+                  <label class="col-sm-10" for="Slovenia">Slovenia</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="South Africa" value="South Africa">
+                  <label class="col-sm-10" for="South Africa">South Africa</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="South Korea" value="South Korea">
+                  <label class="col-sm-10" for="South Korea">South Korea</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Spain" value="Spain">
+                  <label class="col-sm-10" for="Spain">Spain</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Sweden" value="Sweden">
+                  <label class="col-sm-10" for="Sweden">Sweden</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Taiwan" value="Taiwan">
+                  <label class="col-sm-10" for="Taiwan">Taiwan</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Turkey" value="Turkey">
+                  <label class="col-sm-10" for="Turkey">Turkey</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Ukraine" value="Ukraine">
+                  <label class="col-sm-10" for="Ukraine">Ukraine</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="United States" value="United States">
+                  <label class="col-sm-10" for="United States">United States</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input class="col-sm-2" type="checkbox" id="Uruguay" value="Uruguay">
+                  <label class="col-sm-10" for="Uruguay">Uruguay</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <input type="button"style="text-align: right;" value="Submit" onclick="callGraph()">
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="underscore.js"></script>
+    <!-- Initialize d3.v3 -->
+    <script src="d3.js"></script>
+    <!-- Initialize parallel coordinates js -->
+    <script src="javascript.js"></script>
+
+  </body>
+</html>
