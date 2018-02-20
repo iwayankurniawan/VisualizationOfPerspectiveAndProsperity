@@ -315,8 +315,20 @@ $("#Country").hide()
 $("#countryList").hide()
 $("#yearLabel").hide()
 $("#countryLabel").hide()
+$("#analyticTrail").hide()
+
+var callAnalytic=function(){
+  $("#analyticTrail").show()
+  $("#Year").hide()
+  $("#Country").hide()
+  $("#countryList").hide()
+  $("#yearLabel").hide()
+  $("#countryLabel").hide()
+  $("#graph").remove();
+}
 
 var callGraph=function () {
+  $("#analyticTrail").hide()
   $("#Year").show()
   $("#Country").show()
   $("#countryList").show()

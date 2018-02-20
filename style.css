@@ -1,5 +1,9 @@
 h1 {
-    text-align: right;
+    text-align: left;
+}
+
+img{
+  text-align: center;
 }
 
 #showCountry{
